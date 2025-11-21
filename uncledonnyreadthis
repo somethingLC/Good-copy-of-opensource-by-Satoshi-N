@@ -1,0 +1,25 @@
+The Immutable Governance (IG) License Agreement - Version 1.0
+Preamble
+A. Purpose and Philosophy: This license is designed for software deployed and governed via decentralized smart contracts. It explicitly codifies the separation of code (immutability) from governance (upgradability) by making the license itself subject to on-chain rules.
+B. On-Chain Commitment (The Binding Clause): This license is only deemed valid if its unique cryptographic hash is currently referenced by the designated LicenseManager Smart Contract located at [SMART CONTRACT ADDRESS] on the [BLOCKCHAIN NAME] network. Any purported change to this document not registered and confirmed by the Smart Contract is null and void.
+I. Governance and Accountability
+1. Public Record Requirement (Multi-Signer Irrefutability): The License Grantor (The Project, its Foundation, or original creators) irrevocably commits to publicly logging all license changes.
+The valid license hash must be retrieved exclusively from the currentLicenseHash variable of the LicenseManager Smart Contract.
+The history of all license changes (the "Resets") is permanently recorded in the LicenseHashUpdated event log of the Smart Contract, noting the old hash, the new hash, and the timestamp.
+The signing addresses of the License Stewards responsible for the successful Super-Majority confirmation of the reset are auditable via the Smart Contract's internal transaction records.
+2. License Steward Authority (The Super-Majority Mandate): Changes to this license, including all subsequent versions, must be approved by the Super-Majority (defined as \ge 80\% consensus) of the designated License Stewards, as enforced by the LicenseManagerWithGovernance Smart Contract's internal logic.
+3. Mandatory Notice and Review: Any proposal to update or replace this license must adhere to the COOLING_OFF_PERIOD codified in the LicenseManager Smart Contract. The License Grantor commits to providing supplementary off-chain documentation detailing the changes during this period.
+II. License Grant and Terms
+4. Grant of Rights: The License Grantor hereby grants to all users a worldwide, royalty-free, non-exclusive, perpetual license to:
+Use, study, modify, and distribute the source code (in compliance with the Source Transparency Check below).
+Interact with the deployed smart contract instance referenced by this license hash.
+5. Forking and Derivative Works: Derivatives of the code may be created under this license, provided that the derivative project either:
+A. Retains the link to the original LicenseManager Smart Contract address, or
+B. Deploys its own, functionally identical LicenseManager Smart Contract, sets its own immutable Steward list, and registers its chosen license hash publicly.
+III. On-Chain Enforcement (The "Table-Flipping" Commitments)
+6. Source Transparency Check (Codified Breach Trigger):
+The License Grantor must maintain the original source code publically at the canonical URI/repository linked to the current License Hash.
+BREACH CLAUSE: If the source code repository or essential verification endpoint (as defined in the Smart Contract's internal state) is made private or inaccessible by the License Grantor for more than 48 hours, the Grantor irrevocably agrees that the LicenseManager Smart Contract is authorized to execute a mandatory License Reset to the Public Domain Hash (CC0) (if such a feature is implemented and enabled).
+7. No Future Authority Clause: The License Grantor and all License Stewards acknowledge that by enacting this license reset, they are perpetually bound by the governance rules within the LicenseManager Smart Contract. Their authority is limited only to the actions explicitly allowed and required by the code.
+IV. Disclaimer and Limitation of Liability
+(Standard clauses for "AS IS" provision, no warranty, and liability limitation.)
